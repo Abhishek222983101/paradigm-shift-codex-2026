@@ -1,0 +1,7 @@
+node_modules
+.next
+e2e.mjs
+probe.mjs
+e2e-*.png
+AGENTS.md
+CLAUDE.md
