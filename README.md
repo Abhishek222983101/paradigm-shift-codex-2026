@@ -179,20 +179,51 @@ browser, real engine, real files) — not asserted.
 
 ## 6. System Architecture
 
-```mermaid
-flowchart LR
-    U[6–10 s vernacular clip<br/>upload / sample / screen-record] --> X[FFmpeg-equivalent extract<br/>frames + 16 kHz mono<br/>in-browser via Canvas + Web Audio]
-    X --> V[👁 Visual branch<br/>9-zone motion search<br/>+ Laplacian sharpness<br/>+ 8x8 blockiness]
-    X --> A[👂 Audio branch<br/>radix-2 FFT spectral flux<br/>+ log-energy / ZCR novelty<br/>+ prominence peak-pick]
-    X --> F[🧬 Forensic branch<br/>bitrate + resolution<br/>+ sharpness + blockiness<br/>→ Gen-1…5 estimate]
-    V --> FU[⚖ Fusion<br/>45 / 35 / 20 weighted vote<br/>+ mute-talking penalty]
-    A --> FU
-    F --> FU
-    FU --> S{Integrity ≥ 70?}
-    S -->|yes| R1[REAL stamp]
-    S -->|40–69| R2[SUSPECT stamp]
-    S -->|< 40| R3[FAKE stamp]
-    R1 & R2 & R3 --> E[Evidence board<br/>timeline + splice markers<br/>+ lab notes + timings]
+```
+                        +-------------------------------+
+                        | 6-10 s vernacular clip        |
+                        | upload / sample / screen-cast |
+                        +---------------+---------------+
+                                        |
+                                        v
+                        +-------------------------------+
+                        | Extract (in-browser)          |
+                        | frames via Canvas + mono      |
+                        | audio via Web Audio           |
+                        +---------------+---------------+
+                                        |
+            +---------------------------+---------------------------+
+            |                           |                           |
+            v                           v                           v
+ +---------------------+    +---------------------+    +---------------------+
+ | VISUAL branch       |    | AUDIO branch        |    | FORENSIC branch     |
+ | 9-zone motion       |    | FFT spectral flux + |    | bitrate + resolution|
+ | search vs speech    |    | energy/ZCR novelty, |    | + sharpness +       |
+ | + sharpness +       |    | prominence peak-    |    | blockiness          |
+ | 8x8 blockiness      |    | pick for splices    |    | -> Gen-1..5 estimate|
+ +----------+----------+    +----------+----------+    +----------+----------+
+            |                           |                           |
+            +---------------------------+---------------------------+
+                                        |
+                                        v
+                        +-------------------------------+
+                        | FUSION: 45 / 35 / 20 vote     |
+                        | + mute-talking penalty        |
+                        +---------------+---------------+
+                                        |
+                                        v
+                        +-------------------------------+
+                        | Integrity score 0-100         |
+                        | >= 70 REAL / 40-69 SUSPECT /  |
+                        | < 40 FAKE                     |
+                        +---------------+---------------+
+                                        |
+                                        v
+                        +-------------------------------+
+                        | Evidence board: verdict stamp |
+                        | + timeline + splice markers + |
+                        | lab notes + per-branch timings|
+                        +-------------------------------+
 ```
 
 **Pipeline budget guards** (what guarantees <10 s on weak hardware):
