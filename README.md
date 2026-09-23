@@ -12,26 +12,56 @@
 | 🚀 Live Demo | **https://fake-face-riot-paradigm-shift.vercel.app** |
 | 💻 Source | **https://github.com/Abhishek222983101/paradigm-shift-codex-2026** |
 | 🧪 Status | Functional prototype · verified end-to-end in headless Chromium |
+| ▶️ **Demo Video** | **https://youtu.be/lT2kp7NVi-c** |
+
+---
+
+## ▶️ Demo Video
+
+Watch the full 3-minute walkthrough — sample scans, forced verdict flips,
+and the evidence board, all running live in the browser:
+
+[![SatyaCheck Demo Video](https://img.shields.io/badge/YouTube-Watch%20Demo-red?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/lT2kp7NVi-c)
+
+<p align="center">
+  <a href="https://youtu.be/lT2kp7NVi-c">
+    <img src="https://img.youtube.com/vi/lT2kp7NVi-c/maxresdefault.jpg" alt="SatyaCheck — Fake Face, Real Riot demo video" width="720">
+  </a>
+</p>
+
+**Direct link:** https://youtu.be/lT2kp7NVi-c
+
+**Chapters:**
+
+| Time | Section |
+|------|---------|
+| 00:00 | The problem — fake video → real riot |
+| 00:20 | How the 3-branch pipeline works |
+| 00:50 | Test 1 — AI anchor → FAKE (31/100) |
+| 01:25 | Test 2 — Real man → SUSPECT (60/100) |
+| 01:55 | Force the detector to flip — same pixels, different verdict |
+| 02:30 | Zero backend proof + links |
 
 ---
 
 ## Table of Contents
 
-1. [The Problem](#1-the-problem)
-2. [Our Idea](#2-our-idea)
-3. [Live Links](#3-live-links)
-4. [Evaluator Workflow — Test Us in 3 Minutes](#4-evaluator-workflow--test-us-in-3-minutes)
-5. [What Each Sample Proves](#5-what-each-sample-proves)
-6. [System Architecture](#6-system-architecture)
-7. [Modules Deep-Dive](#7-modules-deep-dive)
-8. [ML / DL Stack & Production Roadmap](#8-ml--dl-stack--production-roadmap)
-9. [Why It Survives 4th–5th Generation Re-compression](#9-why-it-survives-4th5th-generation-re-compression)
-10. [Performance Budget (Measured)](#10-performance-budget-measured)
-11. [Tech Stack](#11-tech-stack)
-12. [Run It Locally](#12-run-it-locally)
-13. [Project Structure](#13-project-structure)
-14. [Future Scope](#14-future-scope)
-15. [References](#15-references)
+1. [Demo Video](#️-demo-video)
+2. [The Problem](#1-the-problem)
+3. [Our Idea](#2-our-idea)
+4. [Live Links](#3-live-links)
+5. [Evaluator Workflow — Test Us in 3 Minutes](#4-evaluator-workflow--test-us-in-3-minutes)
+6. [What Each Sample Proves](#5-what-each-sample-proves)
+7. [System Architecture](#6-system-architecture)
+8. [Modules Deep-Dive](#7-modules-deep-dive)
+9. [ML / DL Stack & Production Roadmap](#8-ml--dl-stack--production-roadmap)
+10. [Why It Survives 4th–5th Generation Re-compression](#9-why-it-survives-4th5th-generation-re-compression)
+11. [Performance Budget (Measured)](#10-performance-budget-measured)
+12. [Tech Stack](#11-tech-stack)
+13. [Run It Locally](#12-run-it-locally)
+14. [Project Structure](#13-project-structure)
+15. [Future Scope](#14-future-scope)
+16. [References](#15-references)
 
 ---
 
@@ -98,6 +128,7 @@ Two design principles keep it honest:
 |---|---|
 | 🚀 **Deployed app (test here)** | https://fake-face-riot-paradigm-shift.vercel.app |
 | 💻 Source code | https://github.com/Abhishek222983101/paradigm-shift-codex-2026 |
+| ▶️ **Demo video (YouTube)** | **https://youtu.be/lT2kp7NVi-c** |
 | 📦 Sample clips (in-repo) | `/public/samples/` — AI anchor, real man, elephant + thumbnails |
 
 Everything runs **100% client-side in the browser** — no server, no uploads,
